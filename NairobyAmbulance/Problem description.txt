@@ -1,0 +1,27 @@
+- Goal: - Place six virtual ambulances around the city
+        - Moving them around throughout the day
+        - Minimising the distance travelled when respondong to crash
+
+- Data: - Recorded crashes 2018 until June 2019
+        - From Uber movement 
+        - Road survey
+        - Weather patterns
+
+- Original Data:
+        - Train.csv: Crashes identified by the World Bank DIME [2018-01-01 to 2019-06-30]
+        - Weather.csv: daily weather based on GFS 
+        - Segment_info.csv: contains info on specific road segments [Physical characteristics (obstacle) and behavorial    characteristics(people walking along the road side)]; can be linked with segments_geometry.geojson
+        - segments_geometry.geojson: geographical representations of the road segments
+        
+- Train.csv:
+    - Uid: unique ID
+    - Datetime: date and time of the crash
+    - Latitude and Longitude: location of the crash
+
+- Segment_info: 
+    - segment_id: the unique ID of the specific road segment
+    - side: each road segment has up to two sides, i.e. traffic going in opposite directions
+    
+- Sample Submission:
+    - Date: a date column (3 hours interval covering the test period)
+    - A[N]_Latitude and A[N]_Longitude: used to place ambulance N at a specific location
